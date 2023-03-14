@@ -20,19 +20,19 @@
 
 #### Finish time: *2:40 PST*
 
-#### Actual time needed to complete: *25 min*
+#### Actual time needed to complete: *45 min*
 
 
 
-#### Feature 3: *Allow users to Favorite Individual Beasts*
+#### Feature 3: *Bootstrap*
 
 #### Estimate of time needed to complete: *2 hours*
 
-#### Start time: *1:55 PST*
+#### Start time: *2:45 PST*
 
-#### Finish time: *2:40 PST*
+#### Finish time: *4:30 PST*
 
-#### Actual time needed to complete: *25 min*
+#### Actual time needed to complete: *105 min*
 
 
 

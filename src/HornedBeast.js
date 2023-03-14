@@ -1,5 +1,9 @@
 // TODO: Bring in the Imports
 import React from 'react';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import './App.css';
+
 
 // TODO: Create the Class and have a Render Method...ADD Constructor and Super
 class HornedBeast extends React.Component {
@@ -22,12 +26,16 @@ class HornedBeast extends React.Component {
 
   render() {
     return (
-      <article>
-        <h2>{this.props.title}</h2>
+      <Card style={{ width: '18rem' }}>
         <p>💖 {this.state.favorites} Favorites </p>
-        <img src={this.props.image_url} alt={this.props.title} onClick={this.handleFavorites} width="300" height="250"/>
-        <p>{this.props.description}</p>
-      </article>
+        <Card.Img variant="top" src={this.props.image_url} alt={this.props.title}/>
+        <Card.Body>
+        
+          <Card.Title>{this.props.title}</Card.Title>
+          <Card.Text>{this.props.description}</Card.Text>
+          <Button variant="primary" onClick={this.handleFavorites}>Favorite</Button>
+        </Card.Body>
+    </Card>
     );
   }
 }

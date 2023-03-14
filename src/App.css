@@ -36,3 +36,123 @@
     transform: rotate(360deg);
   }
 }
+
+.card {
+  margin: 25px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 40%;
+  border: 5px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #f6f44e, #f45511);
+}
+
+.card-body {
+  border: 5px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  margin: 5px;
+}
+
+article {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Rainbow Button via https://lenadesign.org/2022/05/31/css-rainbow-border-button-animation/ */
+.btn {
+  position: relative;
+  width: 250px;
+  height:100px;
+  background-image: 
+    linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
+  cursor: pointer;
+}
+
+.btn:before {
+  content:"";
+  position: absolute;
+  width: 240px;
+  height: 90px;
+  background-color: black;
+  top:5px;
+  left:5px;
+}
+
+.btn:after {
+  content:"Favorite";
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top:50%;
+  left:50%;
+  font-family: arial;
+  font-weight: 900;
+  font-size: 25px;
+  background-image: 
+    linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  
+}
+
+@keyframes move {
+  to {
+    background-position: 2500vh;
+  }
+}
+
+.btn:hover {
+  animation: move 30s linear infinite;
+}
+
+.btn:hover:after {
+  animation: move 29s linear infinite;
+}
+
+h1 {
+  color: white;
+  font-size: 48px;
+  text-align: center;
+}
+
+
+/* Rainbow Background from https://codepen.io/nohoid/pen/eYXpNL*/
+html, body { 
+    height: 100%;
+    width: 100%;
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    background-size: 1800% 1800%;
+  
+  -webkit-animation: rainbow 18s ease infinite;
+  -z-animation: rainbow 18s ease infinite;
+  -o-animation: rainbow 18s ease infinite;
+    animation: rainbow 18s ease infinite;}
+  
+  @-webkit-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-moz-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-o-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @keyframes rainbow { 
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }

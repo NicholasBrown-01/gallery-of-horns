@@ -1,7 +1,8 @@
 // TODO: Bring in the Imports
 import React from 'react';
 import HornedBeast from './HornedBeast';
-import data from './data/data.json'
+import data from './data/data.json';
+
 
 // TODO: Create the Class and have a Render Method
 class Main extends React.Component {
