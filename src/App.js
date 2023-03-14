@@ -5,7 +5,6 @@ import Main from './Main';
 import Footer from './Footer';
 
 // TODO: Create the Class - will always have a "render" method
-
 class App extends React.Component {
   render() {
     return (
