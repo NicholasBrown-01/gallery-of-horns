@@ -1,3 +1,41 @@
+# Code Fellows Time Estimate for Features:
+
+#### Feature 1: *Display Feature*
+
+#### Estimate of time needed to complete: *2 hours*
+
+#### Start time: *1:30 PST*
+
+#### Finish time: *1:55 PST*
+
+#### Actual time needed to complete: *25 min*
+
+
+
+#### Feature 2: *Allow users to Favorite Individual Beasts*
+
+#### Estimate of time needed to complete: *2 hours*
+
+#### Start time: *1:55 PST*
+
+#### Finish time: *1:55 PST*
+
+#### Actual time needed to complete: *25 min*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +106,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
