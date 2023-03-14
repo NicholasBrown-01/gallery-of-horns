@@ -3,6 +3,8 @@ import React from 'react';
 import BeastData from './BeastData';
 
 // TODO: Create the Class and have a Render Method
+// https://www.pluralsight.com/guides/how-to-use-the-map()-function-to-export-javascript-in-react
+// https://reactjs.org/docs/lists-and-keys.html
 class HornedBeast extends React.Component {
   render() {
     return (
