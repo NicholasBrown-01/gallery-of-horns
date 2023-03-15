@@ -3,6 +3,11 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './App.css';
+// From: https://react-bootstrap.github.io/layout/grid/
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 
 
 // TODO: Create the Class and have a Render Method...ADD Constructor and Super
@@ -26,16 +31,21 @@ class HornedBeast extends React.Component {
 
   render() {
     return (
-      <Card style={{ width: '18rem' }}>
-        <p>💖 {this.state.favorites} Favorites </p>
-        <Card.Img variant="top" src={this.props.image_url} alt={this.props.title}/>
-        <Card.Body>
-        
-          <Card.Title>{this.props.title}</Card.Title>
-          <Card.Text>{this.props.description}</Card.Text>
-          <Button variant="primary" onClick={this.handleFavorites}>Favorite</Button>
-        </Card.Body>
-    </Card>
+      <Container fluid>
+        <Row>
+          <Col xs={8} sm={6} md={4}>
+            <Card style={{ width: '100%' }}>
+              <p>💖 {this.state.favorites} Favorites </p>
+              <Card.Img variant="top" src={this.props.image_url} alt={this.props.title}/>
+              <Card.Body>
+                <Card.Title>{this.props.title}</Card.Title>
+                <Card.Text>{this.props.description}</Card.Text>
+                <Button variant="primary" onClick={this.handleFavorites}>Favorite</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }
