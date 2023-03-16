@@ -3,11 +3,6 @@ import Modal from 'react-bootstrap/Modal';
 
 
 class SelectedBeast extends React.Component {
-  // handleClickedBeast = () => {
-  //   this.props.handleOpenModal()
-  // }
-
-
 render() {
   return (
     <>

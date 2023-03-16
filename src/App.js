@@ -5,6 +5,7 @@ import Main from './Main';
 import Footer from './Footer';
 import data from './data/data.json';
 import SelectedBeast from './SelectedBeast';
+import HornFilter from './HornFilter';
 
 // TODO: Create the Class - will always have a "render" method
 class App extends React.Component {
@@ -14,11 +15,10 @@ class App extends React.Component {
       showModal: false,
       selectedBeastImg: '',
       selectedBeastDesc: '',
+      sortedData: data,
     }
   }
  
-  // ? NEW CODE BELOW //
-
   // MODAL METHOD TO CLOSE THE MODAL
   handleCloseModal = () => {
     this.setState({
@@ -34,15 +34,40 @@ class App extends React.Component {
     })
   }
 
-    // ? NEW CODE ABOVE //
+  ////////// ? LAB 04 HANDLE SELECT //////////
+
+  handleHornSelect = (event) => {
+    let selected = event.target.value;
+console.log(selected);
+  if(selected === 'Two'){
+    let newData = data.filter(beastobj => beastobj.horns % 2 === 0);
+      this.setState ({
+        sortedData: newData
+      })
+  } else if(selected === 'One'){
+    let newData = data.filter(beastobj => beastobj.horns % 2 === 1);
+      this.setState({
+        sortedData: newData
+      })
+    } else if(selected === 'All'){
+      this.setState({
+        sortedData: data
+      })
+    }
+  }
+
+  ////////// ? LAB 04 UPDATED RENDER FOR MAIN AND HORNFILTER //////////
 
   render() {
     console.log(this.state);
     return (
       <>
         <Header />
-        <Main handleOpenModal={this.handleOpenModal} data={data}/>
-        <SelectedBeast showModal={this.state.showModal} selectedBeastDesc={this.state.selectedBeastDesc} selectedBeastImg={this.state.selectedBeastImg} handleCloseModal={this.handleCloseModal}/>
+        <HornFilter handleHornSelect={this.handleHornSelect}/>
+        <Main handleOpenModal={this.handleOpenModal} data={this.state.sortedData}
+        />
+        <SelectedBeast showModal={this.state.showModal} selectedBeastDesc={this.state.selectedBeastDesc} selectedBeastImg={this.state.selectedBeastImg} handleCloseModal={this.handleCloseModal}
+        />
         <Footer />
       </>
     )
