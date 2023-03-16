@@ -35,10 +35,10 @@ class HornedBeast extends React.Component {
 
   render() {
     return (
-      <Container fluid>
-        <Row>
-          <Col xs={8} sm={6} md={4}>
-            <Card style={{ width: '100%' }}>
+      // <Container fluid>
+      //   <Row>
+      //     <Col xs={8} sm={6} md={4}>
+      <Card style={{ width: '12rem'}}>
               <p>💖 {this.state.favorites} Favorites </p>
               <Card.Img onClick={this.handleImageClick} variant="top" src={this.props.image_url} alt={this.props.title}/>
               <Card.Body>
@@ -47,9 +47,9 @@ class HornedBeast extends React.Component {
                 <Button variant="primary" onClick={this.handleFavorites}>Favorite</Button>
               </Card.Body>
             </Card>
-          </Col>
-        </Row>
-      </Container>
+      //     </Col>
+      //   </Row>
+      // </Container>
     );
   }
 }
