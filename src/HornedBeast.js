@@ -19,6 +19,10 @@ class HornedBeast extends React.Component {
     }
   }
 
+  handleImageClick = () => {
+    this.props.handleOpenModal(this.props.description, this.props.image_url);
+  }
+
 // TODO: Method to update favorites for each picure
 
   handleFavorites = () => {
@@ -36,7 +40,7 @@ class HornedBeast extends React.Component {
           <Col xs={8} sm={6} md={4}>
             <Card style={{ width: '100%' }}>
               <p>💖 {this.state.favorites} Favorites </p>
-              <Card.Img variant="top" src={this.props.image_url} alt={this.props.title}/>
+              <Card.Img onClick={this.handleImageClick} variant="top" src={this.props.image_url} alt={this.props.title}/>
               <Card.Body>
                 <Card.Title>{this.props.title}</Card.Title>
                 <Card.Text>{this.props.description}</Card.Text>

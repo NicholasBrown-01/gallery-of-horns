@@ -35,7 +35,15 @@
 #### Actual time needed to complete: *105 min*
 
 
+#### Feature 4: *Display a Modal*
 
+#### Estimate of time needed to complete: *4 hours*
+
+#### Start time: *1:25 PST*
+
+#### Finish time: * 5:22 PST*
+
+#### Actual time needed to complete: *4 hours*
 
 
 
