@@ -61,13 +61,13 @@ article {
   height: 350px;
   flex: 1 0 265px;
   max-width: 350px;
-  background: linear-gradient(360deg, #f1ebea, #b7b5b5, #828282, #757574, #717171, #424242, #424242, #4b4a4b, #817f81);
-background-size: 99% 140%;
+  background: linear-gradient(120deg, #f1ebea, #b7b5b5, #828282, #757574, #717171, #424242, #424242, #4b4a4b, #817f81);
+background-size: 200% 250%;
 
--webkit-animation: rainbow 5s ease infinite;
--z-animation: rainbow 5s ease infinite;
--o-animation: rainbow 5s ease infinite;
-  animation: rainbow 5s ease infinite;}
+-webkit-animation: rainbow 2s ease infinite;
+-z-animation: rainbow 2s ease infinite;
+-o-animation: rainbow 2s ease infinite;
+  animation: rainbow 2s ease infinite;}
 
 @-webkit-keyframes rainbow {
     0%{background-position:0% 82%}
@@ -123,7 +123,7 @@ background-size: 99% 140%;
 }
 
 .btn {
-  border: 2px solid white !important;
+  border: 2px solid rgb(255, 0, 0) !important;
   position: absolute;
   bottom:10%;
   left: 25%;
@@ -156,7 +156,7 @@ background-size: 99% 140%;
   transition: border-color .1s ease-out !important;
   /* Rainbow Background from https://codepen.io/nohoid/pen/eYXpNL*/
   background-image: 
-    linear-gradient(to right, rgb(239, 16, 16), rgb(252, 6, 6), rgb(181, 6, 6)); 
+    linear-gradient(to right, rgb(166, 6, 6), rgb(249, 30, 30), rgb(116, 4, 4)); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
 }
@@ -168,13 +168,13 @@ background-size: 99% 140%;
 }
 
 .btn:hover {
-  animation: move 200s linear infinite;
-  border: 5px solid rgb(255, 0, 0) !important;
+  animation: move 40s linear infinite;
+  border: 5px solid rgb(255, 255, 255) !important;
   transition: border-color .1s ease-out !important;
 }
 
 .btn:hover:after {
-  animation: move 100s linear infinite;
+  animation: move 150s linear infinite;
 }
 
 h1 {
@@ -218,9 +218,9 @@ h1 {
   background: linear-gradient(120deg, #ffffff, #ddfb83, #f4a466, #69c7e9, #2b7df7, #9872f1, #480681);
   background-size: 120% 140% !important;
   
-  -webkit-animation: rainbow 1s ease infinite !important;
-  -o-animation: rainbow 5s ease infinite !important;
-    animation: rainbow 5s ease infinite !important;}
+  -webkit-animation: rainbow 2s ease infinite !important;
+  -o-animation: rainbow 2s ease infinite !important;
+    animation: rainbow 2s ease infinite !important;}
   
   @-webkit-keyframes rainbow {
       10%{background-position:0% 82%}
@@ -250,9 +250,9 @@ h1 {
   background: linear-gradient(120deg, #ffffff, #ddfb83, #f4a466, #69c7e9, #2b7df7, #9872f1, #480681);
   background-size: 120% 140% !important;
   
-  -webkit-animation: rainbow 1s ease infinite !important;
-  -o-animation: rainbow 5s ease infinite !important;
-    animation: rainbow 5s ease infinite !important;}
+  -webkit-animation: rainbow 2.5s ease infinite !important;
+  -o-animation: rainbow 2.5s ease infinite !important;
+    animation: rainbow 2.5s ease infinite !important;}
   
   @-webkit-keyframes rainbow {
       50%{background-position:0% 82%}
