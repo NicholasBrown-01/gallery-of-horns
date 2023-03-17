@@ -34,14 +34,14 @@ class HornedBeast extends React.Component {
   render() {
     return (
 
-      <Card style={{ width: '12rem'}}>
-              <p>💖 {this.state.favorites} Favorites </p>
-              <Card.Img onClick={this.handleImageClick} variant="top" src={this.props.image_url} alt={this.props.title}/>
-              <Card.Body>
+              <Card style={{ width: '12rem'}}>
+                <Card.Img onClick={this.handleImageClick} variant="top" src={this.props.image_url} alt={this.props.title}/>
+                <p>💖 {this.state.favorites} Favorites </p>
+                <Card.Body onClick={this.handleImageClick}>
                 <Card.Title>{this.props.title}</Card.Title>
                 <Card.Text>{this.props.description}</Card.Text>
+                </Card.Body>
                 <Button variant="primary" onClick={this.handleFavorites}>Favorite</Button>
-              </Card.Body>
             </Card>
     );
   }

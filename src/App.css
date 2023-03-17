@@ -1,3 +1,7 @@
+#root {
+  background-color: black;
+}
+
 .App {
   text-align: center;
 }
@@ -41,27 +45,29 @@ article {
   display: flex;
   flex-wrap: wrap;
   background-color: black;
+  justify-content: center;
 }
 
 
 
 /* Rainbow Button via https://lenadesign.org/2022/05/31/css-rainbow-border-button-animation/ */
 .card {
+  color: white;
   display: flex;
   margin: 25px;
   text-align: center;
-  border-style: solid blue !important;
-  border-width: 14px;
+  border: solid rgb(153, 153, 153) !important;
+  border-width: 5px !important;
   height: 350px;
   flex: 1 0 265px;
   max-width: 350px;
-  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-background-size: 300% 100%;
+  background: linear-gradient(360deg, #f1ebea, #b7b5b5, #828282, #757574, #717171, #424242, #424242, #4b4a4b, #817f81);
+background-size: 99% 140%;
 
 -webkit-animation: rainbow 5s ease infinite;
--z-animation: rainbow 1s ease infinite;
--o-animation: rainbow 1s ease infinite;
-  animation: rainbow 1s ease infinite;}
+-z-animation: rainbow 5s ease infinite;
+-o-animation: rainbow 5s ease infinite;
+  animation: rainbow 5s ease infinite;}
 
 @-webkit-keyframes rainbow {
     0%{background-position:0% 82%}
@@ -84,19 +90,25 @@ background-size: 300% 100%;
     100%{background-position:0% 82%}
 }
 
+.card:hover {
+  border-color: white !important;
+  transition: border-color .1s ease-out !important;
+
+}
+
 
 .card img {
   width: 100%;
   height: 40%;
   border: 5px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(to left, #f6f44e, #f45511);
+  border-image-source: linear-gradient(to left, #f8f8f7, #232323);
 }
 
 .card-body {
   border: 5px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  border-image-source: linear-gradient(to left, #363637, #e8e7e8);
   flex: 1;
   height: 300px;
   display: flex;
@@ -111,11 +123,13 @@ background-size: 300% 100%;
 }
 
 .btn {
+  border: 2px solid white !important;
   position: absolute;
+  bottom:10%;
+  left: 25%;
   width: 150px;
-  height:75px;
-  background-image: 
-    linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
+  height: 75px;
+  background-image: linear-gradient(to right, rgb(247, 1, 1),rgb(255, 39, 39),rgb(251, 72, 72),rgb(212, 6, 6)); 
   cursor: pointer;
   bottom: 20px;
 }
@@ -125,7 +139,7 @@ background-size: 300% 100%;
   position: absolute;
   width: 90%;
   height: 70%;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   top:15%;
   left:5%;
 }
@@ -139,11 +153,12 @@ background-size: 300% 100%;
   font-family: arial;
   font-weight: 900;
   font-size: 20px;
+  transition: border-color .1s ease-out !important;
   /* Rainbow Background from https://codepen.io/nohoid/pen/eYXpNL*/
   background-image: 
-    linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
+    linear-gradient(to right, rgb(239, 16, 16), rgb(252, 6, 6), rgb(181, 6, 6)); 
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;  
+  -webkit-text-fill-color: transparent; 
 }
 
 @keyframes move {
@@ -153,15 +168,109 @@ background-size: 300% 100%;
 }
 
 .btn:hover {
-  animation: move 30s linear infinite;
+  animation: move 200s linear infinite;
+  border: 5px solid rgb(255, 0, 0) !important;
+  transition: border-color .1s ease-out !important;
 }
 
 .btn:hover:after {
-  animation: move 29s linear infinite;
+  animation: move 100s linear infinite;
 }
 
 h1 {
-  color: black;
+  background-color: black;
+  color: white;
   font-size: 48px;
   text-align: center;
+}
+
+.form-select {
+  font-weight: 700 !important;
+  border: 4px solid black !important;
+  width: 400px !important;
+  margin: 0 auto !important;
+  background-color: rgb(5, 173, 224) !important;
+  color: white !important;
+  text-align: center !important;
+}
+
+.form-select:hover {
+  border-color: white !important;
+  transition: border-color .1s ease-out !important;
+}
+
+.modal-body {
+  text-align: center !important;
+  border: 10px solid rgb(255, 255, 255) !important;
+  border-bottom: none !important;
+  border-top: none !important;
+
+  
+}
+
+.modal-header {
+  font-weight: 800;
+  color: rgb(0, 0, 0);
+  border: 10px solid rgb(255, 255, 255) !important;
+  border-bottom: none !important;
+  text-align: center !important;
+  font-size: 30px;
+  background: linear-gradient(120deg, #ffffff, #ddfb83, #f4a466, #69c7e9, #2b7df7, #9872f1, #480681);
+  background-size: 120% 140% !important;
+  
+  -webkit-animation: rainbow 1s ease infinite !important;
+  -o-animation: rainbow 5s ease infinite !important;
+    animation: rainbow 5s ease infinite !important;}
+  
+  @-webkit-keyframes rainbow {
+      10%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-moz-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-o-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @keyframes rainbow { 
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+
+}
+
+.modal-footer {
+  border: 10px solid rgb(255, 255, 255) !important;
+  border-top: none !important;
+  background: linear-gradient(120deg, #ffffff, #ddfb83, #f4a466, #69c7e9, #2b7df7, #9872f1, #480681);
+  background-size: 120% 140% !important;
+  
+  -webkit-animation: rainbow 1s ease infinite !important;
+  -o-animation: rainbow 5s ease infinite !important;
+    animation: rainbow 5s ease infinite !important;}
+  
+  @-webkit-keyframes rainbow {
+      50%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-moz-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-o-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @keyframes rainbow { 
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
 }
