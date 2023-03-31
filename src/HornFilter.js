@@ -8,20 +8,13 @@ class HornFilter extends React.Component {
       <Form.Select aria-label="Default select example" onChange={this.props.handleHornSelect}>
         <option value="Select an option">Filter by Horns</option>
         <option value="All">All</option>
-        <option value="Two">Two</option>
-        <option value="One">One</option>
-      </Form.Select>
+        <option value="One">1</option>
+        <option value="Two">2</option>
+        <option value="Three">3</option>
+        <option value="Hundred">100</option>
+      </Form.Select> 
     )
   }
 }
 
 export default HornFilter;
-
-
-// DEFINE STATES AND FUNCTIONS FOR CHANGING THOSE STATES
-
-// DEFINE SUB COMPONENTS
-
-// PASS PROPS TO SUB COMPONENTS SO THEY CAN BE UPDATED BY PARENT
-
-// REFLECT UPDATES TO STATES AND SHARE INFORMATION (SUCH AS BEASTDATA)

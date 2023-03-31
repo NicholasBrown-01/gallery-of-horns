@@ -3,7 +3,7 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './App.css';
-// From: https://react-bootstrap.github.io/layout/grid/
+
 
 
 

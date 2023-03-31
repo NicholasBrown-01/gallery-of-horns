@@ -9,7 +9,7 @@ import HornFilter from './HornFilter';
 
 // TODO: Create the Class - will always have a "render" method
 class App extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       showModal: false,
@@ -18,7 +18,7 @@ class App extends React.Component {
       sortedData: data,
     }
   }
- 
+
   // MODAL METHOD TO CLOSE THE MODAL
   handleCloseModal = () => {
     this.setState({
@@ -38,32 +38,41 @@ class App extends React.Component {
 
   handleHornSelect = (event) => {
     let selected = event.target.value;
-console.log(selected);
-  if(selected === 'Two'){
-    let newData = data.filter(beastobj => beastobj.horns % 2 === 0);
-      this.setState ({
-        sortedData: newData
-      })
-  } else if(selected === 'One'){
-    let newData = data.filter(beastobj => beastobj.horns % 2 === 1);
+    if (selected === 'One') {
+      let newData = data.filter(beastobj => beastobj.horns === 1);
       this.setState({
         sortedData: newData
       })
-    } else if(selected === 'All'){
+    } else if (selected === 'Two') {
+      let newData = data.filter(beastobj => beastobj.horns === 2);
+      this.setState({
+        sortedData: newData
+      })
+    } else if (selected === 'Three') {
+      let newData = data.filter(beastobj => beastobj.horns === 3);
+      this.setState({
+        sortedData: newData
+      })
+    } else if (selected === 'Hundred') {
+      let newData = data.filter(beastobj => beastobj.horns === 100);
+      this.setState({
+        sortedData: newData
+      })
+    } else if (selected === 'All') {
       this.setState({
         sortedData: data
       })
     }
+    console.log(selected);
   }
 
   ////////// ? LAB 04 UPDATED RENDER FOR MAIN AND HORNFILTER //////////
 
   render() {
-    console.log(this.state);
     return (
       <>
         <Header />
-        <HornFilter handleHornSelect={this.handleHornSelect}/>
+        <HornFilter handleHornSelect={this.handleHornSelect} />
         <Main handleOpenModal={this.handleOpenModal} data={this.state.sortedData}
         />
         <SelectedBeast showModal={this.state.showModal} selectedBeastDesc={this.state.selectedBeastDesc} selectedBeastImg={this.state.selectedBeastImg} handleCloseModal={this.handleCloseModal}
